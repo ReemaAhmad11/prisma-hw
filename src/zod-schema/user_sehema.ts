@@ -17,7 +17,6 @@ export const addUserSchema = z.object({
 
     age :z.number({ required_error: 'Age must be more than 60!' })
     .min(18).max(60)
-
   }),
 });
 
