@@ -2,7 +2,7 @@ import express from 'express';
 import 'dotenv/config';
 import { movieDB ,userDB} from './config/db';
 import movieRouters from './routers/movie_route';
-// import userRouters from './routers/user_route';
+import userRouters from './routers/user_route';
 
 const app = express();
 
@@ -13,7 +13,7 @@ userDB();
 app.use(express.json());
 
 app.use('/movie', movieRouters);
-// app.use('/user', userRouters);
+app.use('/user', userRouters);
 
 
 app.listen(5005, () => {
